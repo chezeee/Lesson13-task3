@@ -1,4 +1,20 @@
 // Class definition
 export default class User {
-  // your code
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  getInitials() {
+    return this.firstName[0] + this.lastName[0];
+  }
+
+  canVote() {
+    return `Can vote? - ${this.age >= 18}`;
+  }
 }
